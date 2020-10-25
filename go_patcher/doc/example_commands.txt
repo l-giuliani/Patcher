@@ -1,0 +1,11 @@
+patcher.exe generate C:/patchTests/fer-0.1.0.war C:/patchTests/fer-0.1.0_new.war C:/patchTests/fer.patch
+
+patcher.exe apply C:/patchTests/fer-0.1.0.war C:/patchTests/fer.patch C:/patchTests/patched_fer.war
+
+---
+
+patcher.exe print-crc32 C:/patchTests/fer-0.1.0.war
+
+patcher.exe generate-crc32 C:/patchTests/fer-0.1.0.war C:/patchTests/fer-0.1.0_new.war C:/patchTests/fer.patch C:/patchTests/fer-crc32.txt
+
+patcher.exe apply-crc32 C:/patchTests/fer-0.1.0.war C:/patchTests/fer.patch C:/patchTests/patched_fer.war C:/patchTests/fer-crc32.txt

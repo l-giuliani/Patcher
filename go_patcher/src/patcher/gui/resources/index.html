@@ -1,0 +1,116 @@
+
+<html lang="en">
+    <head>
+      <meta charset="utf-8">
+    
+      <title>Patcher</title>
+      <meta name="description" content="Awesome Patcher">
+      <meta name="author" content="LG">
+    
+      <link rel="stylesheet" href="vendor/bootstrap-4.4.1-dist/css/bootstrap.min.css">
+      <link rel="stylesheet" href="css/style.css">
+    
+    </head>
+    
+    <body style="height: 100%;">
+    <div style="padding:10px;background-color:rgb(68,73,82)">
+        <div style="padding:10px;text-align:center;background-color:rgb(100,107,121);">
+            <img src="images/logo-nobg.png"/>
+        </div>
+    </div>
+
+    <div style="padding:10px;background-color:rgb(68,73,82);height: 100%;">
+        <div id="cover-spin" style="display:none">
+            <img style="margin-top: 100px;" src="images/loading.gif"/>
+        </div>
+        <div style="padding:10px;background-color:rgb(100,107,121);">
+            <div class="row">
+                <div class="col-sm-12" style="color:white">
+                    New version
+                </div>
+                <div class="col-sm-12">                                        
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="newVersion" >
+                            <label id="newVersionLabel" class="custom-file-label fileinput" for="newVersion">Choose file...</label>
+                    
+                        </div>                 
+                </div>
+            </div>
+
+            <div class="row" style="margin-top:10px">
+                <div class="col-sm-12" style="color:white">
+                    Old version
+                </div>
+                <div class="col-sm-12">                                    
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input fileinput" id="precVersion" >
+                            <label id="precVersionLabel" class="custom-file-label fileinput" for="precVersion">Choose file...</label>
+                    
+                        </div>                 
+                </div>
+            </div>        
+            <!--
+            <div class="row" style="margin-top:10px">
+                <div class="col-sm-12" style="color:white">
+                    Destination Folder 
+                </div>
+                <div class="col-sm-12">                                    
+                        <div class="custom-file">
+                            <input type="file" webkitdirectory mozdirectory msdirectory odirectory directory class="custom-file-input" id="outputFolder" >
+                            <label id="outputFolderLabel" class="custom-file-label fileinput" for="outputFolder">Choose file...</label>
+                        </div>                 
+                </div>
+            </div> 
+            -->
+
+            <div class="row" style="margin-top:10px">
+                <div class="col-sm-12" style="color:white">
+                    Patch FileName 
+                </div>
+                <div class="col-sm-12">                                    
+                        <div>
+                            <input id="patchFileName" class="form-control fileinput" type="text" value="patch.patch">
+                        </div>                 
+                </div>
+            </div>
+
+            <div class="row" style="margin-top:10px">
+                <div class="col-sm-12" style="color:white">
+                    Crc32 FileName 
+                </div>
+                <div class="col-sm-12">                                    
+                        <div>
+                            <input id="crc32FileName" class="form-control fileinput" type="text" value="crc32.txt">
+                        </div>                 
+                </div>
+            </div>
+
+            <div class="row" style="margin-top:10px">
+                <div class="col-sm-12" style="text-align:center">
+                <button id="generatePatch" type="button" class="btn btn-dark">Generate Patch</button>
+                </div>
+            </div>
+
+            <div class="row" style="margin-top:10px">
+                <div id="alert-success" class="col-sm-12" style="text-align:center;display:none">
+                <div class="alert alert-success" role="alert">
+                    Patch Succesfully Created
+                </div>
+                </div>
+                <div id="alert-error" class="col-sm-12" style="text-align:center;display:none">
+                <div class="alert alert-danger" role="alert">
+                    Error Creating Patch
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <!--<script src="vendor/jquery/jquery.js"></script>-->
+        <!--<script src="vendor/bootstrap-4.4.1-dist/js/bootstrap.min.js"></script>-->
+
+        <script src="js/viewUtils.js"></script>
+        <script src="js/services.js"></script>
+        <script src="js/main.js"></script>
+        
+    </body>
+</html>
